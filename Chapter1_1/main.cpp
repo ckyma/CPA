@@ -6,6 +6,8 @@
  */
 
 #include <iostream>
+#include <iomanip>
+#include <cmath>
 
 using namespace std;
 
@@ -18,7 +20,48 @@ int main(void) {
     
     lazy();
     
-    cout << "It's me, your first program";
+    cout << "It's me, your first program" << endl;
+    
+    // manipulators to set basefield property of stream object for int type
+    int Byte = 255;
+    
+    cout << Byte << hex << " " << Byte << endl;
+    cout << Byte << dec << " " << Byte << endl;
+    cout << oct << Byte << endl;
+    cout << setbase(16) << Byte << endl;
+    cout << setbase(10) << Byte << endl;
+    
+    char Char = 'X';
+    int Int = Char;
+    cout << Char << " " << (int)Char << " " << Int << " " << (char)Int << endl;
+    
+    // manipulators to set stream object for float type
+    float x = 2.5, y = 0.0000000025;
+    cout << fixed << x << " " << y << endl;
+    cout << scientific << x << " " << y << endl;
+    
+    // int value;
+    float value;
+    float squareroot;
+    
+    cout << "Give me a number and I will find its square root:" << endl;
+    cin >> value;
+    if(value >= 0.0) {
+        // squareroot = sqrt(value);
+        squareroot = sqrtf(value);
+        cout << "You have given: " << value << endl;
+        cout << "The square root is: " << squareroot << endl;
+    }
+    
+    // Chapter 1 Assessment
+    int remainder1 = 1 % 2 + 4 % 2;
+    cout << remainder1 << endl; // 1
+    
+    int remainder2 = 11 % 3 % 4;
+    cout << remainder2 << endl; // 2
+    
+    int i = 8;
+    cout << i << hex << i + i << oct << i << dec << endl; // 81010
     
     return 0;
     //return 1;
