@@ -1,6 +1,6 @@
 /* 
  * File:   hello.cpp
- * Author: phinary0
+ * Author: CY
  *
  * Created on August 4, 2014, 10:07 AM
  */
