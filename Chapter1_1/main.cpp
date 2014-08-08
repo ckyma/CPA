@@ -8,6 +8,7 @@
 #include <iostream>
 #include <iomanip>
 #include <cmath>
+//#include <math.h>
 
 using namespace std;
 
@@ -39,6 +40,7 @@ int main(void) {
     float x = 2.5, y = 0.0000000025;
     cout << fixed << x << " " << y << endl;
     cout << scientific << x << " " << y << endl;
+    std::cout.unsetf ( std::ios::floatfield );
     
     // int value;
     float value;
@@ -47,13 +49,20 @@ int main(void) {
     cout << "Give me a number and I will find its square root:" << endl;
     cin >> value;
     if(value >= 0.0) {
+        // the difference in C++ is that sqrt() accepts either a double, 
+        // a float or a long double while sqrtf() accepts only a float.
         // squareroot = sqrt(value);
         squareroot = sqrtf(value);
         cout << "You have given: " << value << endl;
         cout << "The square root is: " << squareroot << endl;
     }
     
-    // Chapter 1 Assessment
+    // test ambiguity of g++ when overloading pow in <cmath>, but not <math.h>
+    cout << pow(3, 2) << endl; // ok
+    cout << pow(3, 2.0) << endl; // ok
+    cout << pow(3.0, 2) << endl; // ok
+    
+    // Chapter 1 Assessment post-hoc testing
     int remainder1 = 1 % 2 + 4 % 2;
     cout << remainder1 << endl; // 1
     
