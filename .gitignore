@@ -29,6 +29,7 @@
 *.o
 *.so
 Debug/
+nbproject/
 
 # Packages #
 ############
