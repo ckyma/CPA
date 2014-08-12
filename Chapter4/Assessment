@@ -1,0 +1,243 @@
+ExamChapter 4 Assessment - CPATime left: 22:03
+
+What happens when you attempt to compile and run the following code?
+
+    #include <iostream>
+    using namespace std;
+    
+    int main() {
+        short s = 1;
+        int i = 2;
+        long l = 3;
+        float f = 4.4;
+        double d = 6.6;
+        
+        cout << s/float(i) + int(f)/i + long(d)/s;
+        return 0;
+    }
+    
+ 
+Select correct answer (single choice)
+ Compilation fails 
+ It prints 8.8 
+ It prints 8.5 
+ It prints 8.0 
+
+What happens when you attempt to compile and run the following code?
+
+    #include <iostream>
+    #include <string>
+    using namespace std;
+    
+    int main() {
+        string s = "a";
+        
+        cout << s  << "b" + "c";
+        return 0;
+    }
+    
+ 
+
+Select correct answer (single choice)
+ It prints abc 
+ It prints a 
+ Compilation fails 
+ It prints ab 
+
+What happens when you attempt to compile and run the following code?
+
+    #include <iostream>
+    #include <string>
+    using namespace std;
+    
+    int main() {
+        string s = "a";
+        
+        cout << s + "b" + "c";
+        return 0;
+    }
+    
+ 
+
+Select correct answer (single choice)
+ It prints ab 
+ Compilation fails 
+ It prints abc 
+ It prints a 
+
+What happens when you attempt to compile and run the following code?
+
+    #include <iostream>
+    #include <string>
+    using namespace std;
+    
+    int main() {
+        string s1 = "ab";
+        string s2 = "Abc";
+        
+        if(s1 > s2)
+            cout << "yes";
+        else
+            cout << "NO";
+        return 0;
+    }
+    
+ 
+
+Select correct answer (single choice)
+ Compilation fails 
+ It prints NO 
+ It prints yes 
+ It prints nothing 
+
+What happens when you attempt to compile and run the following code?
+
+    #include <iostream>
+    using namespace std;
+    
+    int main() {
+        string s1 = "Ab";
+        string s2 = "Abc";
+        
+        cout << s1.compare(s1);
+        return 0;
+    }
+    
+ 
+
+Select correct answer (single choice)
+ Compilation fails 
+ It prints 0 
+ It prints -1 
+ It prints 1 
+
+What happens when you attempt to compile and run the following code?
+
+    #include <iostream>
+    using namespace std;
+    
+    int main() {
+        string s1 = "1";
+        string s2 = "12";
+        
+        cout << s1.compare(s2);
+        return 0;
+    }
+    
+ 
+
+Select correct answer (single choice)
+ It prints 0 
+ It prints 1 
+ Compilation fails 
+ It prints -1 
+
+What happens when you attempt to compile and run the following code?
+
+    #include <iostream>
+    #include <string>
+    using namespace std;
+    
+    int main() {
+        string s = "ABCDEF";
+        for(int i = 1; i < s.length(); i += 2)
+            s[i - 1] = s[i] + 'a' - 'A';
+        cout << s;
+        return 0;
+    }
+    
+ 
+
+Select correct answer (single choice)
+ It prints BBDDFF 
+ Compilation fails 
+ It prints aAcCeE 
+ It prints bBdDfF 
+
+What happens when you attempt to compile and run the following code?
+
+    #include <iostream>
+    #include <string>
+    using namespace std;
+    
+    int main() {
+        string s = "AB";
+        s.append(s).push_back(s[s.length() - 1]);
+        cout << s;
+        return 0;
+    }
+    
+ 
+
+Select correct answer (single choice)
+ It prints ABABB 
+ It prints ABAB 
+ Compilation fails 
+ It prints ABABA 
+
+What happens when you attempt to compile and run the following code?
+
+    #include <iostream>
+    #include <string>
+    using namespace std;
+    
+    int main() {
+        string s1 = "aleph";
+        string s2 = "alpha";
+        string s;
+        s1.swap(s2);
+        s2.swap(s);
+        s.swap(s2);
+        cout << s2;
+        return 0;
+    }
+    
+ 
+
+Select correct answer (single choice)
+ It prints aleph 
+ Compilation fails 
+ It prints alpha 
+ It prints an empty string 
+
+What happens when you attempt to compile and run the following code?
+
+    #include <iostream>
+    
+    namespace SpaceA {
+        int A;
+    }
+    
+    namespace SpaceB {
+        int A;
+    }
+    
+    using namespace SpaceA, SpaceB;
+    
+    int main() {
+        SpaceA::A = SpaceB::A = 1;
+        std::cout << A + 1;
+        return 0;
+    }
+    
+ 
+
+Select correct answer (single choice)
+ It prints 2 
+ Compilation fails 
+ It prints 0 
+ It prints 1 
+
+          
+My Answer:
+1. 8.5
+2. Compilation fails
+3. abc
+4. yes
+5. 0
+6. -1
+7. bBdDfF
+8. ABABB
+9. aleph
+10. Compilation fails
+
