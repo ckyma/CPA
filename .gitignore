@@ -67,3 +67,5 @@ Thumbs.db
 *.mk
 /Chapter4/build/
 /Chapter4/dist/
+/Chapter5/build/
+/Chapter5/dist/
