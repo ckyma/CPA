@@ -31,7 +31,7 @@ int main(int argc, char** argv) {
     int rows = 5, cols = 5;
     int **arr;
     // allocate and initialize the array
-    arr = new int * [rows];
+    arr = new int* [rows];
     for (int r = 0; r < rows; r++) {
         arr[r] = new int[r + 1];
         for(int c = 0; c <= r; c++)
