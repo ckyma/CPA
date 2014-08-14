@@ -1,6 +1,6 @@
 /* 
  * File:   main.cpp
- * Author: phinary0
+ * Author: CY
  *
  * Created on August 12, 2014, 7:27 PM
  */
