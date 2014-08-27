@@ -58,6 +58,7 @@ public:
 */
 
 // 6.3
+/*
 class Pet {
 protected:
     string Name;
@@ -75,7 +76,7 @@ public:
     Dog(string n) : Pet(n) { }
     void MakeSound(void) { cout << Name << " the Dog says: Woof! Woof!" << endl; }
 };
-
+*/
 
 
 /*
@@ -136,6 +137,7 @@ int main(int argc, char** argv) {
     */
     
     // 6.3
+    /*
     Cat *a_cat;
     Dog *a_dog;
     a_cat = new Cat("Kitty");
@@ -149,6 +151,10 @@ int main(int argc, char** argv) {
     // Implicit conversion
     Pet *a_pet = a_cat;
     a_pet -> MakeSound();
+    */
+    
+    // Assessment
+    // Q1
     
     return 0;
 }

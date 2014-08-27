@@ -1,0 +1,297 @@
+ExamChapter 6 Assessment - CPATime left: 17:08
+What happens when you attempt to compile and run the following code?
+
+    #include <iostream>
+    using namespace std;
+    
+    class X {
+    private: 
+        int v;
+    };
+    
+    class Y : public X {
+        Y() : v(0) {}
+    }
+    
+    int main() {
+        Y y;
+        cout << y.v;
+        return 0;
+    }
+ 
+Select correct answer (single choice)
+ Compilation fails 
+ It prints -1 
+ It prints 1 
+ It prints 0 
+
+What happens when you attempt to compile and run the following code?
+
+    #include <iostream>
+    using namespace std;
+    
+    class X {
+    protected: 
+        int v;
+    };
+    
+    class Y : protected X {
+        Y() : v(0) {}
+    }
+    
+    int main() {
+        Y *y = new Y();
+        cout << y->v;
+        delete y;
+        return 0;
+    }
+ 
+
+Select correct answer (single choice)
+ It prints 1 
+ It prints -1 
+ Compilation fails 
+ It prints 0 
+
+What happens when you attempt to compile and run the following code?
+
+    #include <iostream>
+    using namespace std;
+    
+    class X { };
+    class Y : public X { };
+    class Z : public X { };
+    
+    int main() {
+        Z *z = new Z();
+        Y *y = new Y();
+        z = y;
+        cout << (z == y);
+        return 0;
+    }
+ 
+
+Select correct answer (single choice)
+ Compilation fails 
+ It prints 0 
+ It prints -1 
+ It prints 1 
+
+What happens when you attempt to compile and run the following code?
+
+    #include <iostream>
+    using namespace std;
+    
+    class X { 
+    public:
+        void shout() { cout << "X"; } 
+    };
+    class Y : public X { 
+    public:
+        void shout() { cout << "Y"; }
+    };
+    
+    int main() {
+        X *x = new Y();
+        static_cast<Y *>(x) -> shout();
+        return 0;
+    }
+ 
+
+Select correct answer (single choice)
+ It prints X 
+ Compilation fails 
+ It prints Y 
+ It prints nothing 
+
+What happens when you attempt to compile and run the following code?
+
+    #include <iostream>
+    using namespace std;
+    
+    class X { 
+    public:
+        virtual void shout() { cout << "X"; } 
+    };
+    class Y : public X { 
+    public:
+        void shout() { cout << "Y"; } 
+    };
+    class Z : public Y { 
+    public:
+        void shout() { cout << "Z"; }
+    };
+    
+    int main() {
+        Y *y = new Z();
+        dynamic_cast<X *>(y) -> shout();
+        return 0;
+    }
+ 
+
+Select correct answer (single choice)
+ It prints X 
+ Compilation fails 
+ It prints Y 
+ It prints Z 
+
+What happens when you attempt to compile and run the following code?
+
+    #include <iostream>
+    using namespace std;
+    
+    class A { 
+    public:
+        A() : val(0) {}
+        int val;
+        void inc() { ++val; } 
+    };
+    
+    void Do(A a) {
+        a.inc();
+    }
+    
+    int main() {
+        A a;
+        Do(a);
+        a.inc();
+        cout << a.val;
+        return 0;
+    }
+ 
+
+Select correct answer (single choice)
+ Compilation fails 
+ It prints 2 
+ It prints 0 
+ It prints 1 
+
+What happens when you attempt to compile and run the following code?
+
+    #include <iostream>
+    using namespace std;
+    
+    class A { 
+    public:
+        A() : val(0) {}
+        int val;
+        int inc() { ++val; return val--; } 
+    };
+    
+    void Do(A *a) {
+        a-> val = a->inc();
+    }
+    
+    int main() {
+        A a;
+        Do(&a);
+        cout << a.inc();
+        return 0;
+    }
+ 
+
+Select correct answer (single choice)
+ Compilation fails 
+ It prints 2 
+ It prints 1 
+ It prints 0 
+
+What happens when you attempt to compile and run the following code?
+
+    #include <iostream>
+    using namespace std;
+    
+    class A { 
+        int *val;
+    public:
+        A() { val = new int; *val = 0; }
+        A(A &a) { val = new int; *val = a.get(); }
+        int get() { return ++(*val); } 
+    };
+    
+    int main() {
+        A a,b = a;
+        cout << a.get() << b.get();
+        return 0;
+    }
+ 
+
+Select correct answer (single choice)
+ It prints 22 
+ It prints 20 
+ It prints 21 
+ Compilation fails 
+
+What happens when you attempt to compile and run the following code?
+
+    #include <iostream>
+    using namespace std;
+    
+    class A { 
+    public:
+        int v;
+        A(int x) : v(x + 1) {}
+        int get() const { return v; }
+    };
+    
+    int main() {
+        A a(2);
+        A b(a);
+        cout << a.get() << b.get();
+        return 0;
+    }
+ 
+
+Select correct answer (single choice)
+ Compilation fails 
+ It prints 23 
+ It prints 33 
+ It prints 13 
+
+What happens when you attempt to compile and run the following code?
+
+    #include <iostream>
+    using namespace std;
+    
+    class A { 
+    friend class B;
+    private:
+        int field;
+    public:
+        int set(int x) { return field = ++x; }
+        int get() { return ++field; }
+    };
+    
+    class B {
+    public:
+        void kill(A &a) { a.field = 0; }
+    };
+    
+    int main() {
+        A a; B b;
+        a.set(1);
+        b.kill(a);
+        cout << a.get();
+        return 0;
+    }
+ 
+
+Select correct answer (single choice)
+ It prints 0 
+ It prints 2 
+ Compilation fails 
+ It prints 1 
+
+          
+My Answer:
+1. Compilation fails 
+2. 0
+3. Compilation fails 
+4. Y
+5. X
+6. 1
+7. 2
+8. 22
+9. Compilation fails 
+10. 1
+
