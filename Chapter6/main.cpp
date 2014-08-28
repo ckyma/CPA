@@ -78,6 +78,125 @@ public:
 };
 */
 
+// Assessment
+// Q1
+/*
+class X {
+private: 
+    int v;
+};
+class Y : public X {
+    Y() : v(0) {}
+};
+*/
+
+// Q2
+/*
+class X {
+protected: 
+    int v;
+};
+class Y : protected X {
+    Y() : v(0) {}
+};
+*/
+
+// Q3
+/*
+class X { };
+class Y : public X { };
+class Z : public X { };
+*/
+
+// Q4
+/*
+class X { 
+public:
+    void shout() { cout << "X"; } 
+};
+class Y : public X { 
+public:
+    void shout() { cout << "Y"; }
+};
+*/
+
+// Q5
+/*
+class X { 
+public:
+    virtual void shout() { cout << "X"; } // if base is virtual, all subclasses members are virtual
+    //void shout() { cout << "X"; } // if not virtual
+};
+class Y : public X { 
+public:
+    void shout() { cout << "Y"; } // if base is virtual, all subclasses members are virtual
+};
+class Z : public Y { 
+public:
+    void shout() { cout << "Z"; } // if base is virtual, all subclasses members are virtual
+};
+*/
+
+// Q6
+/*
+class A { 
+public:
+    A() : val(0) {}
+    int val;
+    void inc() { ++val; } 
+};
+void Do(A a) {
+    a.inc();
+}
+*/
+
+// Q7
+/*
+class A { 
+public:
+    A() : val(0) {}
+    int val;
+    int inc() { ++val; return val--; } 
+};
+void Do(A *a) {
+    a-> val = a->inc();
+}
+*/
+
+// Q8
+/*
+class A { 
+    int *val;
+public:
+    A() { val = new int; *val = 0; }
+    A(A &a) { val = new int; *val = a.get(); }
+    int get() { return ++(*val); } 
+};
+*/
+
+// Q9
+/*
+class A { 
+public:
+    int v;
+    A(int x) : v(x + 1) {}
+    int get() const { return v; }
+};
+*/
+
+// Q10
+class A { 
+friend class B;
+private:
+    int field;
+public:
+    int set(int x) { return field = ++x; }
+    int get() { return ++field; }
+};
+class B {
+public:
+    void kill(A &a) { a.field = 0; }
+};
 
 /*
  * 
@@ -147,14 +266,84 @@ int main(int argc, char** argv) {
     a_dog -> MakeSound();
     static_cast<Pet *>(a_dog) -> MakeSound();
     // dynamic_cast == Implicit conversion
-    dynamic_cast<Pet *>(a_dog) -> MakeSound();
+    dynamic_cast<Pet *>(a_dog) -> MakeSound(); // the Pet says: Shh! Shh!
     // Implicit conversion
     Pet *a_pet = a_cat;
-    a_pet -> MakeSound();
+    a_pet -> MakeSound(); // the Pet says: Shh! Shh!
     */
     
     // Assessment
-    // Q1
+    // Q1: Compilation fails
+    /*
+    Y y;
+    cout << y.v; // error: 'int X::v' is private
+    */
+    
+    // Q2: 0 is wrong, Compilation fails is right
+    /*
+    Y *y = new Y(); // error: 'Y::Y()' is private
+    // Explicit Constructors have to be public
+    // Y *y = new Y; // error: 'Y::Y()' is private
+    cout << y->v; // error: 'int X::v' is protected
+    delete y;
+    */
+    
+    // Q3: Compilation fails
+    /*
+    Z *z = new Z();
+    Y *y = new Y();
+    z = y; // error: cannot convert 'Y*' to 'Z*' in assignment
+    cout << (z == y); // error: comparison between distinct pointer types 'Z*' and 'Y*' lacks a cast
+    */
+    
+    // Q4: Y
+    /*
+    X *x = new Y();
+    static_cast<Y *>(x) -> shout();
+    */
+    
+    // Q5: X is wrong, Z is right
+    // If base is virtual, all subclasses are virtual as well, no matter how many inheritance
+    /*
+    Y *y = new Z();
+    dynamic_cast<X *>(y) -> shout(); // Z
+    y -> shout(); // Z
+    */
+    
+    // Q6: 1
+    /*
+    A a;
+    Do(a);
+    a.inc();
+    cout << a.val;
+    */
+    
+    // Q7: 2
+    /*
+    A a;
+    Do(&a);
+    cout << a.inc();
+    */
+    
+    // Q8: 22
+    /*
+    A a,b = a;
+    cout << a.get() << b.get();
+    */
+    
+    // Q9: Compilation fails is wrong, 33 is right
+    /*
+    A a(2);
+    // There is an explicit copy constructor, no error here
+    A b(a);
+    cout << a.get() << b.get();
+    */
+    
+    // Q10: 1
+    A a; B b;
+    a.set(1);
+    b.kill(a);
+    cout << a.get();
     
     return 0;
 }

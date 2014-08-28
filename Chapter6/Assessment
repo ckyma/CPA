@@ -1,5 +1,5 @@
 ExamChapter 6 Assessment - CPATime left: 17:08
-What happens when you attempt to compile and run the following code?
+1. What happens when you attempt to compile and run the following code?
 
     #include <iostream>
     using namespace std;
@@ -25,7 +25,7 @@ Select correct answer (single choice)
  It prints 1 
  It prints 0 
 
-What happens when you attempt to compile and run the following code?
+2. What happens when you attempt to compile and run the following code?
 
     #include <iostream>
     using namespace std;
@@ -53,7 +53,7 @@ Select correct answer (single choice)
  Compilation fails 
  It prints 0 
 
-What happens when you attempt to compile and run the following code?
+3. What happens when you attempt to compile and run the following code?
 
     #include <iostream>
     using namespace std;
@@ -77,7 +77,7 @@ Select correct answer (single choice)
  It prints -1 
  It prints 1 
 
-What happens when you attempt to compile and run the following code?
+4. What happens when you attempt to compile and run the following code?
 
     #include <iostream>
     using namespace std;
@@ -104,7 +104,7 @@ Select correct answer (single choice)
  It prints Y 
  It prints nothing 
 
-What happens when you attempt to compile and run the following code?
+5. What happens when you attempt to compile and run the following code?
 
     #include <iostream>
     using namespace std;
@@ -135,7 +135,7 @@ Select correct answer (single choice)
  It prints Y 
  It prints Z 
 
-What happens when you attempt to compile and run the following code?
+6. What happens when you attempt to compile and run the following code?
 
     #include <iostream>
     using namespace std;
@@ -166,7 +166,7 @@ Select correct answer (single choice)
  It prints 0 
  It prints 1 
 
-What happens when you attempt to compile and run the following code?
+7. What happens when you attempt to compile and run the following code?
 
     #include <iostream>
     using namespace std;
@@ -196,7 +196,7 @@ Select correct answer (single choice)
  It prints 1 
  It prints 0 
 
-What happens when you attempt to compile and run the following code?
+8. What happens when you attempt to compile and run the following code?
 
     #include <iostream>
     using namespace std;
@@ -222,7 +222,7 @@ Select correct answer (single choice)
  It prints 21 
  Compilation fails 
 
-What happens when you attempt to compile and run the following code?
+9. What happens when you attempt to compile and run the following code?
 
     #include <iostream>
     using namespace std;
@@ -248,7 +248,7 @@ Select correct answer (single choice)
  It prints 33 
  It prints 13 
 
-What happens when you attempt to compile and run the following code?
+10. What happens when you attempt to compile and run the following code?
 
     #include <iostream>
     using namespace std;
@@ -285,13 +285,13 @@ Select correct answer (single choice)
           
 My Answer:
 1. Compilation fails 
-2. 0
+2. 0 is wrong, Compilation fails is right
 3. Compilation fails 
 4. Y
-5. X
+5. X is wrong, Z is right
 6. 1
 7. 2
 8. 22
-9. Compilation fails 
+9. Compilation fails is wrong, 33 is right
 10. 1
 
