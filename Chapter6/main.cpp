@@ -185,6 +185,7 @@ public:
 */
 
 // Q10
+/*
 class A { 
 friend class B;
 private:
@@ -197,6 +198,52 @@ class B {
 public:
     void kill(A &a) { a.field = 0; }
 };
+*/
+
+// Assessment Retake
+// Q4
+/*
+class X { 
+public:
+    void shout() { cout << "X"; } 
+};
+class Y : public X { 
+public:
+    virtual void shout() { cout << "Y"; } 
+};
+class Z : public Y { 
+public:
+    void shout() { cout << "Z"; }
+};
+*/
+
+// Q6
+class A { 
+public:
+    A() : val(0) {}
+    int val;
+    void run() { cout << val; } 
+};
+
+class B : public A {
+public:
+    virtual void run() { cout << val + 2; } 
+};
+
+class C : public B {
+    // If no override, use the parent one, even it's virtual
+};
+
+void Do(A *a) {
+    B *b;
+    C *c;
+    if(b = static_cast<B *>(a))
+        b->run();
+    if(c = dynamic_cast<C *>(b))
+        c->run();
+    a->run();
+}
+
 
 /*
  * 
@@ -272,7 +319,7 @@ int main(int argc, char** argv) {
     a_pet -> MakeSound(); // the Pet says: Shh! Shh!
     */
     
-    // Assessment
+    // Assessment: 70%
     // Q1: Compilation fails
     /*
     Y y;
@@ -340,10 +387,24 @@ int main(int argc, char** argv) {
     */
     
     // Q10: 1
+    /*
     A a; B b;
     a.set(1);
     b.kill(a);
     cout << a.get();
+    */
+    
+    // Assessment Retake: 100%
+    // Q4: X
+    /*
+    Y *y = new Z();
+    dynamic_cast<X *>(y) -> shout();
+    */
+    
+    // Q6: 220
+    // If no override, use the parent one, even it's virtual
+    A *a = new C();;
+    Do(a);
     
     return 0;
 }
