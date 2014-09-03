@@ -12,6 +12,7 @@
 using namespace std;
 
 // 7.4
+/*
 void function(int i) {
     switch(i) {
         case 0: throw out_of_range("0");
@@ -32,6 +33,59 @@ void broker(int i) {
         throw;
     }
 }
+*/
+
+// Assessment
+// Q4
+/*
+class X {
+public:
+    X(void) { cout << 1; }
+    ~X(void) { cout << 2; }
+};        
+X *exec() {
+    X *x = new X();
+    throw string("0");
+    return x;
+}
+*/
+
+// Q5
+/*
+class X {
+public:
+    X(void) { cout << 0; }
+    ~X(void) { cout << 2; }
+};
+*/
+
+// Q6
+/*
+class X : public logic_error {
+public:
+    X() : logic_error("0") {};
+};
+void z() throw(X) {
+    throw new logic_error("0"); // Throw a pointer to logic_error object. terminate called after throwing an instance of 'std::logic_error*'
+    // throw logic_error("0"); // runtime error: what(): 0
+    // throw X(); // 0 without error
+}
+*/
+
+// Q7
+class E {};
+class X {
+    static int c;
+public:
+    X() { if(c++ > 2) throw new E; } // Throw pointer to a E object only when c > 2,
+    ~X() { if(c++ > 2) throw new E; } // i.e. after cout << i before exit of f to destruct
+};
+int X::c = 0;
+void f(int i) {
+    X a,b;
+    cout << i;
+}
+
 
 /*
  * 
@@ -39,6 +93,7 @@ void broker(int i) {
 int main(int argc, char** argv) {
     
     // 7.4 Catching exceptions
+    /*
     for(int i = 0; i < 4; i++) {
         try {
             function(i);
@@ -89,8 +144,51 @@ int main(int argc, char** argv) {
             cout << "Something bad happened" << endl;
         }
     }
+    */
     
+    // Assessment: 90%
+    // Q4: 10
+    /*
+    X *x;
+    try {
+        delete exec(); // Destructor is never called due to exception before that
+    } catch(string &s) {
+        cout << s;
+    }
+    */
     
+    // Q5: 01
+    /*
+    try {
+        X *x = new X();
+    throw true;
+        delete x;
+    } catch(bool s) {
+        cout << s;
+    }
+    */
+    
+    // Q6: Execution fails
+    /*
+    X x;
+    try {
+        z();
+    }
+    catch(X &i) { // terminate called after throwing an instance of 'std::logic_error*'
+        cout << i.what();
+    }
+//    catch(logic_error *i) { // terminate called after throwing an instance of 'std::logic_error*'
+//        cout << i->what();
+//    }
+    */
+    
+    // Q7: Execution fails is wrong, 01 is right
+    try {
+        f(0);
+        f(1);
+    } catch(...) {
+        cout << 1;
+    }
     
     return 0;
 }
