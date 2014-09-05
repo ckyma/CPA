@@ -6,6 +6,7 @@
  */
 
 #include <iostream>
+#include <cmath>
 #include "mystack.h"
 
 using namespace std;
