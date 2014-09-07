@@ -6,9 +6,19 @@
  */
 
 #include <iostream>
+#include <string>
 #include "mystack.h"
 
 using namespace std;
+
+// 8.2
+#define ALPHA 3 - 1
+#define BETA (4 - 1)
+#define THETA ALPHA * 2   // treated as expression 3 - 1 * 2
+#define GAMMA BETA * 2    // treated as expression (4 - 1) * 2
+#define SGAMMA "(4 - 1) * 2"
+#define SUNDAY 0
+#define MONDAY 1
 
 // 8.3
 /*
@@ -99,6 +109,25 @@ int main(int argc, char** argv) {
     */
     
     // 8.2
+    int alpha = ALPHA;
+    int beta = BETA;
+    int theta = THETA;  // treated as expression 3 - 1 * 2 == 1
+    int gamma = GAMMA;  // treated as expression (4 - 1) * 2 == 6
+    cout << alpha << endl;
+    cout << beta << endl;
+    cout << theta << endl;
+    cout << gamma << endl;
+    // string sgamma = GAMMA; // error: invalid conversion from ‘int’ to ‘const char*’
+    string sgamma = SGAMMA;
+    cout << sgamma << endl;
+    int big_day = SUNDAY;
+    ++big_day;
+    if(big_day == MONDAY){
+        cout << big_day << endl;
+    }
+    big_day = -1;
+    cout << big_day << endl;
+    
     /*
     enum weekday {SUNDAY, MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY, SATURDAY};
     int day = SUNDAY;

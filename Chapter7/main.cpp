@@ -190,6 +190,8 @@ int main(int argc, char** argv) {
         cout << 1;
     }
     
+    cout << endl << "Execution continues if the exception could be caught." << endl;
+    
     return 0;
 }
 
