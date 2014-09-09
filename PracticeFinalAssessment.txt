@@ -1,0 +1,950 @@
+﻿ExamPractice Final AssessmentTime left: 26:25
+What happens when you attempt to compile and run the following code?
+    #include <iostream>
+    using namespace std;
+    
+    int main (int argc, const char *argv[])
+    {
+      int a = 1, b = 1, c = 1, i = 1;
+      i = b < a < c;
+      cout << i;
+      return 0;
+    }
+Select correct answer (single choice)
+ It prints: 1 
+ It prints: 2 
+ It prints: 4 
+ Compilation fails 
+
+What happens when you attempt to compile and run the following code?
+    #include <iostream>
+    
+    using namespace std;
+    
+    int main()
+    {
+           int val = 0, *adr = &val;
+           cout << *val;
+    
+    
+            return 0;
+    }
+
+Select correct answer (single choice)
+ It prints address of val 
+ Compilation fails 
+ It prints: 0 
+ It prints: 1 
+
+What happens when you attempt to compile and run the following code?
+    #include <iostream>
+    using namespace std;
+    int main(){
+       int i = 2;
+       if (i--==1) 
+           cout << i;
+       else
+           cout << i + 1;
+      return 0;
+    }
+   
+
+Select correct answer (single choice)
+ It prints: i + 1 
+ It prints: 2 
+ It prints: 1 
+ It prints: 3 
+
+What happens when you attempt to compile and run the following code?
+    #include <iostream>
+    using namespace std;
+    class One
+    {
+        public:
+                void out(){ cout<<"One";}
+    };
+    
+    int main()
+    {
+       One arr[2];
+       for(int i = 0; i < 1; i++)
+             arr[i].out();
+    }
+   
+
+Select correct answer (single choice)
+ It prints: One 
+ Runtime error 
+ Compilation error 
+ It prints: OneOne 
+
+Variable "c" in class B, will be...
+    class A {
+        int a;
+    protected:
+        int b;
+    public:
+        int c;
+    };
+        
+        
+    class B : public A {
+        float f;
+    public:
+        void foo() {
+            cout << f << c;
+        }
+    };
+   
+
+Select correct answer (single choice)
+ protected 
+ none of these 
+ public 
+ private 
+
+What is the output of the program given below?
+    #include <iostream>
+    using namespace std;
+    int main (int argc, const char * argv[])
+    {
+          double dbl = -5.55;
+          cout << (int)dbl;
+    }
+   
+
+Select correct answer (single choice)
+ -0 
+ -5 
+ -5.5 
+ -6 
+
+What is the output of the program given below?
+    #include <iostream>
+    using namespace std;
+    void foo(int &parameter)
+    {
+                parameter *= 2;
+    }
+    int main()
+    {
+          int var = 2;
+          foo(var);
+          cout << var;
+          return 0;
+    }
+   
+
+Select correct answer (single choice)
+ 4 
+ 8 
+ 1 
+ 2 
+
+What happens when you attempt to compile and run the following code?
+    #include <iostream>
+    using namespace std;
+    int main()
+    {
+         int a = -1, *p = &a;
+         cout << ((p == NULL) ? 1.1 : 2.2);
+         return 0;
+    }
+   
+
+Select correct answer (single choice)
+ It prints: 2.2 
+ None of these 
+ It prints: 1.1 
+ Compilation error 
+
+Which of the following statements are correct about the following array?
+    char array[255];
+   
+
+Select correct answers (multiple choice)
+ The expression "tab[2]" designates the second element in the array. 
+ The expression "tab[255]" designates the last element in the array. 
+ The array may be initialized at the time of declaration. 
+ The array can store 255 elements. 
+
+What happens when you attempt to compile and run the following code?
+    #include <iostream>
+    using namespace std;
+    int main(){
+       int *Int = new int;
+       *Int = 1 / 2 * 2 / 1. * 2. / 4 * 4;
+       cout << *Int;     
+       return 0;
+    }
+   
+
+Select correct answer (single choice)
+ It prints: 0 
+ It prints: 1 
+ It prints: 8 
+ It prints: 2.5 
+
+Which of the following is user defined data type?
+    1:
+            enum Enum {One, Two, Three};
+    
+    2:
+            int Int=2;
+            
+    3:        
+            char Char;
+            
+    4:
+            struct Struct
+            {
+                    char Char;
+                    int Int;
+            };
+   
+
+Select correct answers (multiple choice)
+ 2 
+ 4 
+ 3 
+ 1 
+
+Which code, inserted into the One class, generates the output "123"?
+    #include <iostream>
+    using namespace std;
+    class One {
+    public:
+        //insert code here
+    };
+    class Two : public One {
+    public:
+            void foo(){ cout << 2; }
+    };
+    class Three : public Two {
+    public:
+            void foo(){ cout << 3; }    
+    };
+    int main()
+    {
+            One   o1;
+            Two   o2;
+            Three o3;
+            One   *o = &o1;
+            o->foo();
+            o = &o2; o->foo();
+            o = &o3; o->foo();
+    }
+
+Select correct answer (single choice)
+ static void foo(){ cout << 1; } 
+ None of these 
+ void foo(){ cout << 1; } 
+ virtual void foo(){ cout << 1; } 
+
+Which code, inserted into the main function, generate the output "a 2"?
+    #include <iostream>
+    using namespace std;
+    namespace Space
+    {  char a = 'a', b = 'b';  }
+    int a = 1, b = 2;
+    int main () {
+    
+      // insert code here
+      cout << a << " " << b;
+      return 0;
+    }
+       
+
+Select correct answer (single choice)
+ using Space::a; 
+ using namespace Space; 
+ using namespace Space::a; 
+ None of these 
+
+What is the output of the program given below?
+    #include <iostream>
+    using namespace std;
+    int main ()
+    {
+      int i = 0;
+      cout << i; 
+      { int i = 1; cout << i; }
+      { int i = 2; }
+      cout << i;
+      return 0;
+    }
+   
+
+Select correct answer (single choice)
+ 012 
+ 120 
+ None of these 
+ 010 
+
+What happens when you attempt to compile and run the following code?
+    #include <iostream>
+    using namespace std;
+    class foo {
+            int p;
+    protected:
+            int q;
+    public:
+            int r;
+    };
+    
+    
+    class bar : public foo {
+    public:
+            void assign() {
+                p = q = r = 2;
+            }
+            void out() { cout << q << r; }
+    };
+    int main () {
+            bar b;
+            b.assign();
+            b.out();
+            return 0;
+    }
+   
+
+Select correct answer (single choice)
+ Compilation fails 
+ 02 
+ 20 
+ 22 
+
+What is the output of this program?
+    #include <iostream>
+    using namespace std;
+    int main()
+    {
+       char str[] = "Hello\0World\0";
+       cout << str;
+       return 0;
+    }
+   
+
+Select correct answer (single choice)
+ Hello\0World 
+ HelloWorld 
+ Hello 
+ Compilation fails 
+
+Which code, inserted into the main function, generate the output "za"?
+    #include <iostream>
+    using namespace std;
+    namespace SpaceOne {  char a = 'a'; }
+    namespace SpaceTwo {  char a = 'z'; }
+    int main () {
+      // insert code here
+      return 0;
+    }
+
+Select correct answer (single choice)
+ cout << SpaceOne::a << SpaceTwo::a; 
+ cout << SpaceTwo::a << SpaceOne::a; 
+ None of these 
+ cout << a << a; 
+
+What happens when you attempt to compile and run the following code?
+    #include <iostream>
+    using namespace std;
+    int main()
+    {
+            char i = '1';
+            switch(i)
+            {
+                case '1':
+                    cout<<"Hello ";
+                case '2':
+                    cout<<"world "; break;
+                case '3':
+                    cout<<"!";
+            }        return 0;
+    }
+
+Select correct answer (single choice)
+ It prints nothing 
+ It prints "Hello world !" 
+ It prints "Hello " 
+ It prints "Hello world " 
+
+What happens when you attempt to compile and run the following code?
+    #include <cstdlib>
+    #include <iostream>
+    using namespace std;
+    char c;
+    char* inc(char par1, int par2)
+    {
+            c = par1 + par2;
+            return &c;
+    }
+    
+    
+    int main()
+    {
+            int a = 'a', b = 3;
+            char *f;
+            f = inc(a,b);
+            cout << *f;
+            return 0;
+    }
+       
+
+Select correct answer (single choice)
+ It prints b 
+ It prints c 
+ It prints a 
+ It prints d 
+
+What happens when you attempt to compile and run the following code?
+    #include <iostream>
+    #include <string>
+    #include <exception>
+    using namespace std;
+    class a
+    {
+    public: virtual string whose()
+            { return "mine"; }
+    };
+    class b
+    {
+    public: virtual string whose()
+            { return "yours"; }
+    };
+    int main () {
+      a b;
+      try  { throw b; }
+      catch (a& e)  { cout << e.whose() << endl; }
+      return 0;
+    }
+       
+
+Select correct answer (single choice)
+ It prints: yours 
+ It prints: mine 
+ It prints: yoursmine 
+ It prints: mineyours 
+
+Which code, inserted into the B class, generate the output "ef"?
+    #include <iostream>
+    #include <string>
+    using namespace std;
+    class Alpha {
+            int p;
+    protected:
+            int q;
+    public:
+            int r;
+            Alpha():p(2),q(3),r(4) {}
+    };
+    class Beta : public Alpha {
+            string s;
+    public:
+            int y;
+            void assign() {  y = 4; s = "f";   }
+            void out() {
+                // insert code here
+            }
+    };
+    int main () {
+            Beta b;
+            b.assign();
+            b.out();
+            return 0;
+    }
+       
+
+Select correct answer (single choice)
+ cout << p << r; 
+ cout << 'a' + r << s; 
+ cout << char('a' + r) << s; 
+ cout << r << s; 
+
+What happens when you attempt to compile and run the following code?
+    #include <iostream>
+    using namespace std;
+    int sub(int x, int y)
+    {
+            x -= y;
+            return x;
+    }
+    int main()
+    {
+            int a = 0, b = 1, c, d;
+            c = sub(a,b);
+            d = sub(c,b);
+            cout << c << d;
+            return 0;
+    }    
+
+Select correct answer (single choice)
+ It prints: 1-2 
+ It prints: 12 
+ It prints: -12 
+ It prints: -1-2 
+
+What happens when you attempt to compile and run the following code?
+    #include <iostream>
+    using namespace std;
+    class one {  
+    public :
+       void foo() { cout << 1; }  
+    };
+    class two {
+    public :
+       void foo() { cout << 2; }   
+    };
+    int main() {
+       two objects[2];
+       two *object = objects;
+       for(int i = 0; i < 2; i++)
+            (object++)->foo();
+       return 0;
+    }
+   
+
+Select correct answer (single choice)
+ It prints: 11 
+ It prints: 22 
+ It prints: 21 
+ It prints: 12 
+
+What is the output of this program if the string "bar" is supplied as input?
+    #include <iostream>
+    #include <string>
+    using namespace std;
+    int main()
+    {
+       string s1 = "foo";
+       string s2;
+       getline(cin,s2);
+       cout << s2.append(s1);
+       return( 0 );
+    }
+   
+
+Select correct answer (single choice)
+ It prints: bar 
+ It prints: foobar 
+ It prints: barfoo 
+ It prints: foo 
+
+What happens when you attempt to compile and run the following code?
+    #include <iostream>
+    using namespace std;
+    char fun(char *p)
+    {
+       char c = *p;
+       (*p)++;
+       return c;
+    }
+    int main()
+    {
+            char array[3]={'a', 'b', 'c'};
+            fun(array + 1);
+            cout << fun(array + 1);
+            return 0;
+    }
+
+Select correct answer (single choice)
+ It prints: b 
+ It prints: a 
+ It prints: c 
+ Compilation fails 
+
+What happens when you attempt to compile and run the following code?
+    #include <iostream>
+    #include <sstream>
+    #include <string>
+    using namespace std;
+    int main(void)
+    {
+      string s;
+      s = "abcd";
+      s.append(s);
+      s.resize(s.size() / 2);
+      cout << s;
+      return 0;
+    }
+   
+
+Select correct answer (single choice)
+ It prints: abcd 
+ It prints: abcdabcd 
+ Compilation fails 
+ It prints an empty string 
+
+What happens when you attempt to compile and run the following code?
+    #include <iostream>
+    using namespace std;
+    class C1 {
+    friend class C2;
+    protected:  int y;
+    public:     int z;
+    private:    int x;
+    public:     C1() { x = y = z = 11; }
+    };
+    
+    class C2 {
+    public: C1 a;
+            C2 () { a.x = 22; };
+            void foo() {
+                cout << a.x << a.y << a.z;
+            }
+    };
+    int main()
+    {
+      C2 c;
+      c.foo();
+      return 0;
+    }
+   
+
+Select correct answer (single choice)
+ It prints: 221111 
+ It prints: 112211 
+ Compilation fails 
+ It prints: 111122 
+
+What happens when you attempt to compile and run the following code?
+    #include <iostream>
+    #include <string>
+    using namespace std;
+    int f(int a)
+    {
+            return a + a;
+    }
+    int main()
+    {
+            int i = 0;
+            for(int a = 0; a < 2; a++)
+                i = f(i + 1);
+            cout << i;
+            return 0;
+    }
+   
+
+Select correct answer (single choice)
+ It prints: 9 
+ It prints: 3 
+ It prints: 6 
+ It prints: 2 
+
+What happens when you attempt to compile and run the following code?
+    #include <iostream>
+    using namespace std;
+    class Zero
+    { public: void out(){ cout << 0;} };
+    class One : public Zero
+    { public: void out(){ cout << 1;} };
+    class Two : public Zero
+    { public: void out(){ cout << 2;} };
+    
+    int main()
+    {
+       Zero *obj;
+       One obj1;
+       obj = &obj1;
+       obj->out();
+       Two obj2;
+       obj = &obj2;
+       obj->out();
+       return 0;
+    }
+   
+
+Select correct answer (single choice)
+ It prints: 01 
+ It prints: 00 
+ It prints: 02 
+ It prints: 12 
+
+What happens when you attempt to compile and run the following code?
+    #include <iostream>
+    using namespace std;
+    
+    class SupClass {
+    public:
+            void show(int par){ cout << par + 1;}
+    };
+    
+    class SubClass : public SupClass {
+    public:
+            void show(float par){ cout << par + 2;}
+    };
+    int main()
+    {
+            SubClass o;
+            o.show(2.0);
+    }
+   
+
+Select correct answer (single choice)
+ It prints: 3 
+ It prints: 2 
+ It prints: 4 
+ It prints: 1 
+
+Which code, inserted into function main, generates the output "abba"?
+    #include <iostream>
+    #include <string>
+    using namespace std;
+    string fun(string s)
+    {
+            return s.substr(0,1)+s.substr(1,1)+s.substr(1,1)+s.substr(0,1);
+    }
+    int main()
+    {
+            string *s = new string("ab");
+            //insert code here
+            return 0;
+    }
+   
+
+Select correct answers (multiple choice)
+ cout << fun("ab"); 
+ cout << fun("abba"); 
+ cout << fun(s); 
+ cout << fun(*s); 
+
+What is the output of this program?
+    #include <iostream>
+    #include <string>
+    
+    
+    using namespace std;
+    
+    
+    int main()
+    {
+       string s1[]= {"A","Z"};
+       string s="";
+       
+       for (int i=0; i<2; i++) 
+                 cout << s.append(s1[i]).insert(1,"_");
+       return( 0 );
+    }
+   
+
+Select correct answer (single choice)
+ A_A 
+ A_A_Z 
+ A_A__Z 
+ A__Z 
+
+What happens when you attempt to compile and run the following code?
+    #include <iostream>
+    using namespace std;
+    int main()
+    {
+      float x = 0.9, y=-0.5;
+      int i,j = 1;
+      i = x + j + y;
+      cout << i;
+      return 0;
+    }
+   
+
+Select correct answer (single choice)
+ It prints: 2.4 
+ It prints: 2 
+ It prints: 1 
+ Compilation error 
+
+What happens when you attempt to compile and run the following code?
+    #include <iostream>
+    using namespace std;
+    
+    int main(){
+      int i = 1;
+      if (--i == 1) {
+          cout << i;
+      } else {
+          cout << --i;
+      }
+     return 0;
+    }
+   
+
+Select correct answer (single choice)
+ It prints: -1 
+ It prints: --1 
+ It prints: 0 
+ It prints: 1 
+
+What happens when you attempt to compile and run the following code?
+    #include <iostream>
+    using namespace std;
+    int var = -1;
+    int static Static(int i)
+    {
+      static int y = 0;
+      y += ++i;
+      return y;
+    }
+    int main()
+    {
+      var++;
+      Static(var++);
+      cout << var << Static(var);
+    }
+   
+
+Select correct answer (single choice)
+ It prints: 9 
+ It prints: 11 
+ It prints: 7 
+ It prints: 13 
+
+What is the output of the program given below ?
+    #include <iostream>
+    using namespace std;
+    int main ()
+    {
+      enum answer { yes, no, whoknows };
+      enum answer a[3];
+      a[0] = no;
+      a[2] = yes;
+      a[1] = whoknows;
+      for(int i = 0; i < 3; i++)
+        cout << a[i];
+      return 0;
+    }
+   
+
+Select correct answer (single choice)
+ It prints: 120 
+ It prints: 210 
+ It prints: 201 
+ It prints: 102 
+
+How can we pass arguments to functions?
+Select correct answer (single choice)
+ None of these 
+ By telepathy 
+ By invocation 
+ By default 
+
+Which code, inserted into the Class, generates the output "abcd"?
+    #include <iostream>
+    using namespace std;
+    class Class {
+    public:
+       static char value;
+       Class() { value++; };
+       ~Class () { value++; };
+       //insert code here
+       void print() { cout << value;}
+    };
+    
+    char Class::value = 'a';
+    
+    int main () {
+       Class a,*b;
+       b = new Class();
+       b->set('a');
+       b->print();
+       delete b;
+       a.print();
+       a.set('c');
+       a.print();
+       a.set();
+       a.print();
+       return 0;
+    }
+
+Select correct answer (single choice)
+ void set(char c) { value = c; } 
+ void set(char c) { cout << c; } 
+ void set() { value = 'd'; } 
+ void set(char c = 'd') { value = c; } 
+
+What happens when you attempt to compile and run the following code?
+    #include <iostream>
+    void fun(int *i)
+    {
+            *i = *i >> *i - 1;
+    }
+    using namespace std;
+    int main()
+    {
+            int i = 2;
+            fun(&i);
+            cout << i;
+            return 0;
+    }
+   
+
+Select correct answer (single choice)
+ It prints: 2 
+ It prints: 0 
+ It prints: 4 
+ It prints: 1 
+
+What happens when you attempt to compile and run the following code?
+    #include <iostream>
+    using namespace std;
+    
+    #define A    0
+    #define B    A+1
+    #define C    1-B
+    
+    int main() {
+        cout << C;
+        return 0;
+    }
+   
+
+Select correct answer (single choice)
+ It prints: 2 
+ It prints: 0 
+ It prints: 3 
+ It prints: 1 
+
+          
+My Answer:
+1. 1
+2. Compilation fails
+3. 2
+4. OneOne
+5. public
+6. -5
+7. 4
+8. 2.2
+9. The array may be initialized at the time of declaration. 
+   The array can store 255 elements.
+10. 0
+11. 4, 1
+12. virtual void foo(){ cout << 1; }
+13. using namespace Space::a; 
+14. 010
+15. Compilation fails
+16. Hello
+17. cout << SpaceTwo::a << SpaceOne::a; 
+18. Hello World
+19. d
+20. mine
+21. cout << char('a' + r) << s; 
+22. -1-2
+23. 22
+24. barfoo
+25. c
+26. abcdabcd
+27. 221111
+28. 6
+29. 00
+30. 4
+31. cout << fun("ab");
+    cout << fun("abba");
+    cout << fun(*s);
+32. A__Z
+33. 1
+34. -1
+35. 13
+36. 102
+37. By default
+38. void set(char c = 'd') { value = c; } 
+39. 1
+40. 0
