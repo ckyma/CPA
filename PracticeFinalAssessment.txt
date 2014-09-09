@@ -1,5 +1,7 @@
-﻿ExamPractice Final AssessmentTime left: 26:25
-What happens when you attempt to compile and run the following code?
+﻿Exam
+Practice Final Assessment
+Time left: 26:25
+1. What happens when you attempt to compile and run the following code?
     #include <iostream>
     using namespace std;
     
@@ -16,7 +18,7 @@ Select correct answer (single choice)
  It prints: 4 
  Compilation fails 
 
-What happens when you attempt to compile and run the following code?
+2. What happens when you attempt to compile and run the following code?
     #include <iostream>
     
     using namespace std;
@@ -36,7 +38,7 @@ Select correct answer (single choice)
  It prints: 0 
  It prints: 1 
 
-What happens when you attempt to compile and run the following code?
+3. What happens when you attempt to compile and run the following code?
     #include <iostream>
     using namespace std;
     int main(){
@@ -55,7 +57,7 @@ Select correct answer (single choice)
  It prints: 1 
  It prints: 3 
 
-What happens when you attempt to compile and run the following code?
+4. What happens when you attempt to compile and run the following code?
     #include <iostream>
     using namespace std;
     class One
@@ -78,7 +80,7 @@ Select correct answer (single choice)
  Compilation error 
  It prints: OneOne 
 
-Variable "c" in class B, will be...
+5. Variable "c" in class B, will be...
     class A {
         int a;
     protected:
@@ -103,7 +105,7 @@ Select correct answer (single choice)
  public 
  private 
 
-What is the output of the program given below?
+6. What is the output of the program given below?
     #include <iostream>
     using namespace std;
     int main (int argc, const char * argv[])
@@ -119,7 +121,7 @@ Select correct answer (single choice)
  -5.5 
  -6 
 
-What is the output of the program given below?
+7. What is the output of the program given below?
     #include <iostream>
     using namespace std;
     void foo(int &parameter)
@@ -141,7 +143,7 @@ Select correct answer (single choice)
  1 
  2 
 
-What happens when you attempt to compile and run the following code?
+8. What happens when you attempt to compile and run the following code?
     #include <iostream>
     using namespace std;
     int main()
@@ -158,7 +160,7 @@ Select correct answer (single choice)
  It prints: 1.1 
  Compilation error 
 
-Which of the following statements are correct about the following array?
+9. Which of the following statements are correct about the following array?
     char array[255];
    
 
@@ -168,7 +170,7 @@ Select correct answers (multiple choice)
  The array may be initialized at the time of declaration. 
  The array can store 255 elements. 
 
-What happens when you attempt to compile and run the following code?
+10. What happens when you attempt to compile and run the following code?
     #include <iostream>
     using namespace std;
     int main(){
@@ -185,7 +187,7 @@ Select correct answer (single choice)
  It prints: 8 
  It prints: 2.5 
 
-Which of the following is user defined data type?
+11. Which of the following is user defined data type?
     1:
             enum Enum {One, Two, Three};
     
@@ -209,7 +211,7 @@ Select correct answers (multiple choice)
  3 
  1 
 
-Which code, inserted into the One class, generates the output "123"?
+12. Which code, inserted into the One class, generates the output "123"?
     #include <iostream>
     using namespace std;
     class One {
@@ -241,7 +243,7 @@ Select correct answer (single choice)
  void foo(){ cout << 1; } 
  virtual void foo(){ cout << 1; } 
 
-Which code, inserted into the main function, generate the output "a 2"?
+13. Which code, inserted into the main function, generate the output "a 2"?
     #include <iostream>
     using namespace std;
     namespace Space
@@ -261,7 +263,7 @@ Select correct answer (single choice)
  using namespace Space::a; 
  None of these 
 
-What is the output of the program given below?
+14. What is the output of the program given below?
     #include <iostream>
     using namespace std;
     int main ()
@@ -281,7 +283,7 @@ Select correct answer (single choice)
  None of these 
  010 
 
-What happens when you attempt to compile and run the following code?
+15. What happens when you attempt to compile and run the following code?
     #include <iostream>
     using namespace std;
     class foo {
@@ -314,7 +316,7 @@ Select correct answer (single choice)
  20 
  22 
 
-What is the output of this program?
+16. What is the output of this program?
     #include <iostream>
     using namespace std;
     int main()
@@ -331,7 +333,7 @@ Select correct answer (single choice)
  Hello 
  Compilation fails 
 
-Which code, inserted into the main function, generate the output "za"?
+17. Which code, inserted into the main function, generate the output "za"?
     #include <iostream>
     using namespace std;
     namespace SpaceOne {  char a = 'a'; }
@@ -347,7 +349,7 @@ Select correct answer (single choice)
  None of these 
  cout << a << a; 
 
-What happens when you attempt to compile and run the following code?
+18. What happens when you attempt to compile and run the following code?
     #include <iostream>
     using namespace std;
     int main()
@@ -370,7 +372,7 @@ Select correct answer (single choice)
  It prints "Hello " 
  It prints "Hello world " 
 
-What happens when you attempt to compile and run the following code?
+19. What happens when you attempt to compile and run the following code?
     #include <cstdlib>
     #include <iostream>
     using namespace std;
@@ -398,7 +400,7 @@ Select correct answer (single choice)
  It prints a 
  It prints d 
 
-What happens when you attempt to compile and run the following code?
+20. What happens when you attempt to compile and run the following code?
     #include <iostream>
     #include <string>
     #include <exception>
@@ -427,7 +429,7 @@ Select correct answer (single choice)
  It prints: yoursmine 
  It prints: mineyours 
 
-Which code, inserted into the B class, generate the output "ef"?
+21. Which code, inserted into the B class, generate the output "ef"?
     #include <iostream>
     #include <string>
     using namespace std;
@@ -462,7 +464,7 @@ Select correct answer (single choice)
  cout << char('a' + r) << s; 
  cout << r << s; 
 
-What happens when you attempt to compile and run the following code?
+22. What happens when you attempt to compile and run the following code?
     #include <iostream>
     using namespace std;
     int sub(int x, int y)
@@ -485,7 +487,7 @@ Select correct answer (single choice)
  It prints: -12 
  It prints: -1-2 
 
-What happens when you attempt to compile and run the following code?
+23. What happens when you attempt to compile and run the following code?
     #include <iostream>
     using namespace std;
     class one {  
@@ -511,7 +513,7 @@ Select correct answer (single choice)
  It prints: 21 
  It prints: 12 
 
-What is the output of this program if the string "bar" is supplied as input?
+24. What is the output of this program if the string "bar" is supplied as input?
     #include <iostream>
     #include <string>
     using namespace std;
@@ -531,7 +533,7 @@ Select correct answer (single choice)
  It prints: barfoo 
  It prints: foo 
 
-What happens when you attempt to compile and run the following code?
+25. What happens when you attempt to compile and run the following code?
     #include <iostream>
     using namespace std;
     char fun(char *p)
@@ -554,7 +556,7 @@ Select correct answer (single choice)
  It prints: c 
  Compilation fails 
 
-What happens when you attempt to compile and run the following code?
+26. What happens when you attempt to compile and run the following code?
     #include <iostream>
     #include <sstream>
     #include <string>
@@ -576,7 +578,7 @@ Select correct answer (single choice)
  Compilation fails 
  It prints an empty string 
 
-What happens when you attempt to compile and run the following code?
+27. What happens when you attempt to compile and run the following code?
     #include <iostream>
     using namespace std;
     class C1 {
@@ -608,7 +610,7 @@ Select correct answer (single choice)
  Compilation fails 
  It prints: 111122 
 
-What happens when you attempt to compile and run the following code?
+28. What happens when you attempt to compile and run the following code?
     #include <iostream>
     #include <string>
     using namespace std;
@@ -632,7 +634,7 @@ Select correct answer (single choice)
  It prints: 6 
  It prints: 2 
 
-What happens when you attempt to compile and run the following code?
+29. What happens when you attempt to compile and run the following code?
     #include <iostream>
     using namespace std;
     class Zero
@@ -661,7 +663,7 @@ Select correct answer (single choice)
  It prints: 02 
  It prints: 12 
 
-What happens when you attempt to compile and run the following code?
+30. What happens when you attempt to compile and run the following code?
     #include <iostream>
     using namespace std;
     
@@ -687,7 +689,7 @@ Select correct answer (single choice)
  It prints: 4 
  It prints: 1 
 
-Which code, inserted into function main, generates the output "abba"?
+31. Which code, inserted into function main, generates the output "abba"?
     #include <iostream>
     #include <string>
     using namespace std;
@@ -709,7 +711,7 @@ Select correct answers (multiple choice)
  cout << fun(s); 
  cout << fun(*s); 
 
-What is the output of this program?
+32. What is the output of this program?
     #include <iostream>
     #include <string>
     
@@ -734,7 +736,7 @@ Select correct answer (single choice)
  A_A__Z 
  A__Z 
 
-What happens when you attempt to compile and run the following code?
+33. What happens when you attempt to compile and run the following code?
     #include <iostream>
     using namespace std;
     int main()
@@ -753,7 +755,7 @@ Select correct answer (single choice)
  It prints: 1 
  Compilation error 
 
-What happens when you attempt to compile and run the following code?
+34. What happens when you attempt to compile and run the following code?
     #include <iostream>
     using namespace std;
     
@@ -774,7 +776,7 @@ Select correct answer (single choice)
  It prints: 0 
  It prints: 1 
 
-What happens when you attempt to compile and run the following code?
+35. What happens when you attempt to compile and run the following code?
     #include <iostream>
     using namespace std;
     int var = -1;
@@ -798,7 +800,7 @@ Select correct answer (single choice)
  It prints: 7 
  It prints: 13 
 
-What is the output of the program given below ?
+36. What is the output of the program given below ?
     #include <iostream>
     using namespace std;
     int main ()
@@ -820,14 +822,14 @@ Select correct answer (single choice)
  It prints: 201 
  It prints: 102 
 
-How can we pass arguments to functions?
+37. How can we pass arguments to functions?
 Select correct answer (single choice)
  None of these 
  By telepathy 
  By invocation 
  By default 
 
-Which code, inserted into the Class, generates the output "abcd"?
+38. Which code, inserted into the Class, generates the output "abcd"?
     #include <iostream>
     using namespace std;
     class Class {
@@ -861,7 +863,7 @@ Select correct answer (single choice)
  void set() { value = 'd'; } 
  void set(char c = 'd') { value = c; } 
 
-What happens when you attempt to compile and run the following code?
+39. What happens when you attempt to compile and run the following code?
     #include <iostream>
     void fun(int *i)
     {
@@ -883,7 +885,7 @@ Select correct answer (single choice)
  It prints: 4 
  It prints: 1 
 
-What happens when you attempt to compile and run the following code?
+40. What happens when you attempt to compile and run the following code?
     #include <iostream>
     using namespace std;
     
@@ -908,17 +910,17 @@ My Answer:
 1. 1
 2. Compilation fails
 3. 2
-4. OneOne
+4. OneOne is wrong, One is right // i < 1, not i < 2, so only arr[0].out()
 5. public
 6. -5
 7. 4
 8. 2.2
-9. The array may be initialized at the time of declaration. 
+9. The array may be initialized at the time of declaration. is wrong, implicitly allocated variables are not initialized
    The array can store 255 elements.
 10. 0
 11. 4, 1
 12. virtual void foo(){ cout << 1; }
-13. using namespace Space::a; 
+13. using namespace Space::a; is wrong, using Space::a; is right
 14. 010
 15. Compilation fails
 16. Hello
@@ -931,7 +933,7 @@ My Answer:
 23. 22
 24. barfoo
 25. c
-26. abcdabcd
+26. abcdabcd is wrong, abcd is right // messed with string::reserve
 27. 221111
 28. 6
 29. 00
@@ -939,12 +941,12 @@ My Answer:
 31. cout << fun("ab");
     cout << fun("abba");
     cout << fun(*s);
-32. A__Z
+32. A__Z is wrong, A_A__Z is right // there are cout in two loops
 33. 1
 34. -1
 35. 13
-36. 102
+36. 102 is wrong, 120 is right
 37. By default
 38. void set(char c = 'd') { value = c; } 
 39. 1
-40. 0
+40. 0 is wrong, 2 is right // 1-B == 1-A+1 == 1-0+1 == 2
