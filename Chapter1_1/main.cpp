@@ -26,8 +26,8 @@ int main(void) {
     // manipulators to set basefield property of stream object for int type
     int Byte = 255;
     
-    cout << Byte << hex << " " << Byte << endl;
-    cout << Byte << dec << " " << Byte << endl;
+    cout << Byte << " " << hex << Byte << endl;
+    cout << Byte << " " << dec << Byte << endl;
     cout << oct << Byte << endl;
     cout << setbase(16) << Byte << endl;
     cout << setbase(10) << Byte << endl;
@@ -69,8 +69,11 @@ int main(void) {
     int remainder2 = 11 % 3 % 4;
     cout << remainder2 << endl; // 2
     
+    cout << 0 % 3 << endl; // 0
+    
     int i = 8;
-    cout << i << hex << i + i << oct << i << dec << endl; // 81010
+    cout << i << hex << i + i << oct << i << endl; // 81010
+    cout << dec; 
     
     return 0;
     //return 1;
