@@ -617,7 +617,7 @@ int main(int argc, char** argv) {
     cout << x << ":" << doit(1, 1.f);
     */
     
-    // Q47: Multiple choices, class Due : public Uno is not the only one, class Due : protected Uno is also right
+    // Q47: Multiple choices, class Due : protected Uno is not the only one, class Due : public Uno is also right
     /*
     Due b;
     b.set();

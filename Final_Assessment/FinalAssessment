@@ -1286,7 +1286,7 @@ My Answer: 90%
 44. 5
 45. 6
 46. 0:1
-47. class Due : protected Uno is only one, class Due : private Uno is also right // multiple choices
+47. class Due : protected Uno is only one, class Due : public Uno is also right // multiple choices
 48. e
 49. #include <iostream> 
 50. 3 is wrong, 4 is right

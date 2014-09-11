@@ -59,7 +59,7 @@ int main(int argc, char** argv) {
     
     // Q2: 0 is wrong, 4 is right
     /*
-    int i = 1, j = i++, k = --i;
+    int i = 1, j = i++, k = --i;     // k = --2 == 1, i == 2 => == 1
     if(i > 0) {
         j++;
         k++;
@@ -79,7 +79,7 @@ int main(int argc, char** argv) {
             k++;
         i++;
     }
-    cout << i * j * k;
+    cout << i * j * k;  // i == 2, j == 2, k == 1
     */
     
     // Q3: 1000000000000000.0000000000000001 is wrong, 1000000000000000.000000 is right
