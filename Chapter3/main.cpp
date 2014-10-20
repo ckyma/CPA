@@ -126,10 +126,15 @@ int main(int argc, char** argv) {
     // if there is no exact fit (as in our example: obviously a float is not a double).
     // error: call of overloaded ‘PlayWithNumber(double)’ is ambiguous
     // literal 1.0 is type double not float, and can NOT be promoted to either float nor int 
-    /*
+    int score1 = 1.2;   // implicit type-casting from double to int, downgraded
+    float score2 = 1.1; // implicit type-casting from double to float, downgraded
+    score2 = 1.2;
+    cout << score1 << endl;     // 1
+    cout << score2 << endl;     // 1.2
+    cout << 1/1.2 << endl;     // 0.833333, promoted to the larger type
     // PlayWithNumber(1.0); // error
     PlayWithNumber(1.0f); // succeed
-    */
+    
     
     // 3.10.2: error for void *ptr; *ptr = 1 or *ptr;
     /*

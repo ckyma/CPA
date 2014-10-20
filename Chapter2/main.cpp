@@ -36,6 +36,33 @@ struct str {
 
 int main(int argc, char** argv) {
     
+    // switch
+    int score = 120;
+    switch (score){
+        default:
+            cout << "Default" << endl;
+        case 1:
+            cout << 1 << endl;
+            break;
+        // case 10/6:  // error: duplicate case value
+        // case 2.2:   // error: case label does not reduce to an integer constant
+        case 13/6:
+            cout << 2 << endl;
+            // continue;   // error: continue statement not within a loop
+        case 'a':
+            cout << 'a' << endl;
+    }
+    /*
+    string day = "SUN";
+    switch (day){           // error: switch quantity not an integer
+        case "MON":
+            cout << "Monday" << endl;
+            break;
+        default: 
+            cout << "Default" << endl;
+    }
+    */
+    
     /**
      * Assessment 1
      */
