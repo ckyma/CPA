@@ -10,11 +10,12 @@
 using namespace std;
 
 // 6.1
-/*
+
 class Super {
 // private:
 protected:
     int storage;
+    int print(void) { cout << "Super: storage = " << storage << endl; return 1; }
 public:
     void put(int val) { storage = val; }
     int get(void) { return storage; }
@@ -22,11 +23,13 @@ public:
 // Without specifier 'public' before Super, member functions are not callable
 // class Sub : Super { }; // error
 class Sub : public Super { 
+
 public:
     // storage is not accessible by declare 'private', should be 'protected'
-    void print(void) { cout << "storage = " << storage << endl; }
+    // Override is identified by signature ONLY, no other restriction, NOT like Java
+    void print(void) { cout << Super::print() << endl; cout << "storage = " << storage << endl; }
 };
-*/
+
 
 // 6.2
 /*
@@ -251,7 +254,7 @@ void Do(A *a) {
 int main(int argc, char** argv) {
     
     // 6.1
-    /*
+    
     // Private member can NOT be called by subclass
     Sub object;
     object.put(100); // error: ‘void Super::put(int)’ is inaccessible within this context
@@ -262,7 +265,7 @@ int main(int argc, char** argv) {
     // error: ‘int Super::storage’ is protected within this context
     // 'storage' is still not accessible even as 'protected', should be public
     // cout << object.storage << endl;
-    */
+    
     
     // 6.2
     /*
