@@ -27,7 +27,17 @@ class Sub : public Super {
 public:
     // storage is not accessible by declare 'private', should be 'protected'
     // Override is identified by signature ONLY, no other restriction, NOT like Java
-    void print(void) { cout << Super::print() << endl; cout << "storage = " << storage << endl; }
+    void print(void) { 
+        
+        // Super sup;
+        // cout << sup.storage; // Child can't access the protected member by object of the parent
+        
+        cout << Super::print() << endl; 
+        cout << "storage = " << storage << endl; 
+    }
+    void printSub() {
+        
+    }
 };
 
 
